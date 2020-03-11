@@ -1,0 +1,68 @@
+[
+    {
+        "id": "0",
+        "title": "El mundo necesita mujeres valientes",
+        "description": "Es hora de salir al mundo y hacernos valer",
+        "created_at": "Mexico",
+        "created_by": "Vania Bachure",
+        "image_url": "https://cdn-www.konbini.com/mx/files/2017/05/suupergirl09.jpg",
+        "next_page": "/comic/0",
+        "image_author": "https://avatars.sched.co/6/3f/8010988/avatar.jpg?0dd",
+        "image_country": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/2000px-Flag_of_Mexico.svg.png"
+    },
+    {
+        "id": "1",
+        "title": "Problema 332 de un godín",
+        "description": "Cada día de mi existencia",
+        "created_at": "México",
+        "created_by": "Borja & Blackburn",
+        "image_url": "https://3.bp.blogspot.com/-LoIURHk0mPI/WHhgK9AhtVI/AAAAAAAABp8/CDaP-Im-yjAnz_oEplCOPdHyhWWmHQbUgCLcB/s1600/cotidiana2.jpg",
+        "next_page": "/comic/1",
+        "image_author": "https://scontent.fntr2-1.fna.fbcdn.net/v/t1.0-9/14291918_557757514414559_6668421793502038468_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_eui2=AeED1bS8qHEA4Xp0dZdIWozXgcmZFLqx0Aavtkg4Olw0qq-Qxbb0oUOyNKwoUxj8zoVLgkYxWEJ5ivyFunlxCBH9Yv51vo2BkiMxbiLa9uwfZQ&_nc_ohc=m0CmwP9ooSEAX9zJvcp&_nc_ht=scontent.fntr2-1.fna&oh=50168b3ea0369ad45a17136a2bd6a2f2&oe=5E97BEEA",
+        "image_country": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/2000px-Flag_of_Mexico.svg.png"
+    },
+    {
+        "id": "2",
+        "title": "A slice of Mr. Toast",
+        "description": "Don't forget",
+        "created_at": "USA",
+        "created_by": "Dan Goodsell",
+        "image_url": "https://ceebees.files.wordpress.com/2009/05/cincodemayo.jpg",
+        "next_page": "/comic/2",
+        "image_author": "https://pbs.twimg.com/profile_images/2416722895/nh3jrk9z7io0epfp1sn5_400x400.jpeg",
+        "image_country": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"
+    },
+    {
+        "id": "3",
+        "title": "Every morning",
+        "description": "I don't like to do things.",
+        "created_at": "USA",
+        "created_by": "Sarah's Scribble",
+        "image_url": "https://m.media-amazon.com/images/S/aplus-media/sota/7ec52911-7d1b-4e64-9e18-4ee044673ce2.PNG",
+        "next_page": "/comic/3",
+        "image_author": "https://www.auxmagazine.com/wp-content/uploads/2018/02/BRI-sarahscribbles2-_P%C3%A1gina_1.jpg",
+        "image_country": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"
+    },
+    {
+        "id": "4",
+        "title": "Happy Birthday to me",
+        "description": "The hard life of cat owners",
+        "created_at": "China",
+        "created_by": "bichi.mao",
+        "image_url": "https://n.sinaimg.cn/sinacn20119/160/w880h880/20191204/462e-ikhvemx8333716.jpg",
+        "next_page": "/comic/4",
+        "image_author": "https://swebtoon-phinf.pstatic.net/20191229_3/157758966800909SIz_JPEG/thumbnail.jpg",
+        "image_country":"https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg"
+    },
+    {
+        "id": "5",
+        "title": "Pizzeta Pizza",
+        "description": "Das ist meine Liebe zur Pizza",
+        "created_at": "Germany",
+        "created_by": "Adoro",
+        "image_url": "https://scontent-yyz1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s640x640/83640954_735201733676422_2341068340826505891_n.jpg?_nc_ht=scontent-yyz1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=vaEnsf45BjUAX_QpIpx&oh=1192bb0c8ebecf56ac3abfba9bcd2c0a&oe=5F01E325",
+        "next_page": "/comic/5",
+        "image_author": "https://scontent.fgdl3-1.fna.fbcdn.net/v/t1.0-9/50914553_2293429280690096_1901730842003111936_n.jpg?_nc_cat=107&_nc_sid=7aed08&_nc_eui2=AeHzUDDi57QbnjseM1hZUWWlQaURTaDClI77GGPMysIGkRqRCyyCQsE4_b8BYW3_rCsrgMVJWsc3dcg4tfAn96YzpV11yXijulMyVmOyY2gHOg&_nc_ohc=KAswIQ6p_tAAX-NcIPf&_nc_ht=scontent.fgdl3-1.fna&oh=2cc371d7649dc68496a6210ce17dcf34&oe=5E98F660",
+        "image_country": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" 
+    }
+]

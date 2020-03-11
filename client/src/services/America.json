@@ -1,0 +1,57 @@
+[
+    {
+        "id": "0",
+        "title": "Argentina",
+        "spanish_title": "Argentina",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
+        "route": ""
+    },
+    {
+        "id": "1",
+        "title": "Brazil",
+        "spanish_title": "Brasil",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png"
+    },
+    {
+        "id": "2",
+        "title": "Canada",
+        "spanish_title": "Canada",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/1200px-Flag_of_Canada_%28Pantone%29.svg.png"
+    },
+    {
+        "id": "3",
+        "title": "Chile",
+        "spanish_title": "Chile",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg"
+    },
+    {
+        "id": "4",
+        "title": "Colombia",
+        "spanish_title": "Colombia",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
+    },
+    {
+        "id": "5",
+        "title": "United States of America",
+        "spanish_title": "Estados Unidos",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"
+    },
+    {
+        "id": "6",
+        "title": "Mexico",
+        "spanish_title": "México",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/2000px-Flag_of_Mexico.svg.png"
+    },
+    {
+        "id": "7",
+        "title": "Peru",
+        "spanish_title": "Perú",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Flag_of_Peru_%281825-1950%29.svg"
+    },
+    {
+        "id": "8",
+        "title": "Venezuela",
+        "spanish_title": "Venezuela",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Flag_of_Venezuela_%28state%29.svg/1200px-Flag_of_Venezuela_%28state%29.svg.png"
+    }
+]

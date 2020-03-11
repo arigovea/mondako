@@ -1,0 +1,9 @@
+#general-container{
+    margin: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1525px;
+  }
+  #comic-container img:hover{
+    border: solid 5px #3a278f;
+  }

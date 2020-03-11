@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 1525px;
+  min-height: 850px;
+}
+#root{
+  width: 100%;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 20px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d3d4; 
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #575757c4; 
+}
+span {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  text-align: center;
+}
+span label {
+  width: 100%;
+  margin-bottom: 25px;
+  font-weight: bolder;
+  font-size: 75px;
+}

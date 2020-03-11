@@ -1,0 +1,56 @@
+[
+    {
+        "id": "0",
+        "title": "Germany",
+        "spanish_title": "Alemania",
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png"
+    },
+    {
+        "id": "1",
+        "title": "Spain",
+        "spanish_title": "España",
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1200px-Flag_of_Spain.svg.png"
+    },
+    {
+        "id": "2",
+        "title": "France",
+        "spanish_title": "Francia",
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1200px-Flag_of_France.svg.png"
+    },
+    {
+        "id": "3",
+        "title": "Netherlands",
+        "spanish_title": "Holanda",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg"
+    },
+    {
+        "id": "4",
+        "title": "Italy",
+        "spanish_title": "Italia",
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg"
+    },
+    {
+        "id": "5",
+        "title": "Norway",
+        "spanish_title": "Noruega",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/1200px-Flag_of_Norway.svg.png"
+    },
+    {
+        "id": "6",
+        "title": "Portugal",
+        "spanish_title": "Portugal",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1200px-Flag_of_Portugal.svg.png"
+    },
+    {
+        "id": "7",
+        "title": "United Kingdom",
+        "spanish_title": "Reino Unido",
+        "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png"
+    },
+    {
+        "id": "8",
+        "title": "Sweden",
+        "spanish_title": "Suecia",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Sweden.svg"
+    }
+]

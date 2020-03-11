@@ -1,0 +1,89 @@
+#comic-page{
+    margin: 0px auto;
+    height: auto;
+    background-color: #eaedee;
+    border: 2px solid #eaedee;
+    border-radius: 5px;
+}
+#image-comic{
+    background-color: #d1d3d4;
+    border: 10px solid #eaedee;
+    height: 500px;
+    border-radius: 5px;
+}
+#comments{
+    height: auto;
+    background-color: white;
+    border: 10px solid #eaedee;
+    border-top: 0px;
+    border-radius: 5px;
+}
+#image-comic img{
+    height: 99.5%;
+    width: 400px;
+    margin: 0px auto;
+    margin-top: .175%;
+    box-sizing: content-box;
+    box-shadow: 5px 0 5px -2px #888, -5px 0 5px -2px #888;
+}
+
+#comments-profile img{
+    width: 100px;
+    height: 100px;
+    margin: 10px 20px;
+    border: solid 1.5px #888;
+}
+#comments-profile{
+    padding: 0px;
+}
+#comments-data img{
+    width: 25px;
+    height: 15px;
+    margin: auto 5px;
+    display: inline-block;
+}
+#comments-data label{
+    font-size: 14px;
+    display: inline-block;
+    width: auto;
+    height: 100%;
+    margin: auto 0px;
+}
+#comments-data span{
+    display: flex;
+    height: 25px;
+}
+#comments-data{
+    padding-top: 10px;
+
+}
+#comments-data h5{
+    font-weight: bold;
+    font-size: 19px;
+}
+#comments-data h6{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+#icon-group{
+    display: flex;
+    padding-right: 0px;
+    justify-content: flex-end;
+}
+#icon-group img{
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#icon-group button{
+    height: 38px;
+    width: 38px;
+    margin: 0px;
+    padding: 0px;
+    background: transparent;
+    border: none;
+    outline: transparent;
+}
