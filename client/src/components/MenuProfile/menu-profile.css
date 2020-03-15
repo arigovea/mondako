@@ -1,0 +1,14 @@
+.button-profile{
+    background-color: #eaedee;
+    border: 3px #eaedee solid;
+    border-radius: 2px;
+    outline: none;
+}
+.containerProf{
+    display: flex;
+    margin-top: 35px;
+    justify-content: space-between;
+}
+.menu-profile-container{
+    display: contents;
+}

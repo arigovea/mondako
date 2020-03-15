@@ -5,6 +5,7 @@ import America  from '../../services/America.json';
 import Europe from '../../services/Europe.json';
 import Asia from '../../services/Asia.json';
 import './explore.css';
+import {Link} from 'react-router-dom';
 
 class Explore extends Component{
     render(){
@@ -16,7 +17,11 @@ class Explore extends Component{
         <Row className ='flagContainer'>
                { 
                    America.map(country => (
+                   <Link to={{
+                        pathname: `/${country.spanish_title}`,
+                    }}>
                        <Country dataCountry = {country} />
+                    </Link>
                    )
                 )
                }
@@ -29,7 +34,11 @@ class Explore extends Component{
         <Row className ='flagContainer'>
                { 
                    Asia.map(country => (
+                    <Link to={{
+                        pathname: `/${country.spanish_title}`,
+                    }}>
                        <Country dataCountry = {country} />
+                    </Link>
                    )
                 )
                }
@@ -42,7 +51,11 @@ class Explore extends Component{
         <Row className ='flagContainer'>
                { 
                    Europe.map(country => (
+                    <Link to={{
+                        pathname: `/${country.spanish_title}`,
+                    }}>
                        <Country dataCountry = {country} />
+                    </Link>
                    )
                 )
                }

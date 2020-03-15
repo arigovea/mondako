@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import {Container, Row} from 'reactstrap';
-import Banner from '../Banner';
-import './home.css';
-import ComicsData from '../../services/comics-home.json';
+import Argentina from '../../services/comics-argentina.json';
 import ComicHome from '../ComicHome/index';
 import {Link} from 'react-router-dom';
 
-class Home extends Component{
+class Explore extends Component{
     render(){
         
        return <Container id="home">
-           <Banner/>
            <Row id="comic-container">
                { 
-                   ComicsData.map(comic => (
+                   Argentina.map(comic => (
                     <Link to={{
                         pathname: `/comic/${comic.id}`,
                         state: {comicToUse: comic}
@@ -29,4 +26,4 @@ class Home extends Component{
     }
 }
 
-export default Home;
+export default Explore;

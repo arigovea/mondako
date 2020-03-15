@@ -1,12 +1,45 @@
 [
     {
+    "id": "0",
+    "name": "Sarahi Govea",
+    "mondako_url": "/sarahigovea",
+    "user_img": "https://scontent.fgdl3-1.fna.fbcdn.net/v/t1.0-9/50853144_10216238072277954_7455647524561354752_n.jpg?_nc_cat=106&_nc_sid=7aed08&_nc_ohc=5Khufne75pUAX_8xJuM&_nc_ht=scontent.fgdl3-1.fna&oh=91850f59fa62c2c20cef4cefeea20483&oe=5E925582",
+    "description": ["CEO Hola Lucy Store || Graphic Designer || Photography || Community Manager || UdeG CUAAD"],
+    "country": "México",
+    "country_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/2000px-Flag_of_Mexico.svg.png",
+    "email": "mx.holalucy@gmail.com",
+    "facebook": "/holalucy.mx",
+    "instagram": "/holalucy.mx",
+    "comics": [
+        {
+            "image_url": "https://aidengdmoore.files.wordpress.com/2018/09/a4-page1.jpg?w=1180"
+        }
+        ]
+    }, 
+    {
     "id": "1",
     "name": "Vania Bachure",
+    "mondako_url": "/suupergirl",
     "description": ["SHE-EO at Vania Bachur Inc. || Soy Kawaii y malvada || Dibujar me hace feliz"],
+    "user_img": "https://avatars.sched.co/6/3f/8010988/avatar.jpg?0dd",
     "country": "México",
     "country_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/2000px-Flag_of_Mexico.svg.png",
     "email": "hola@vaniabachur.com",
     "facebook": "/suupeergirl",
-    "instagram": "/suupeergirl"
+    "instagram": "/suupeergirl",
+    "comics": [
+            {
+                "image_url" : "https://revistafeel.com.mx/cms/wp-content/uploads/2018/01/suupergirl-vida-revista-feel.png"
+            },
+            {
+                "image_url" : "https://revistafeel.com.mx/cms/wp-content/uploads/2018/01/suupergirl-so%C3%B1ar-despertar-revista-feel.png"
+            },
+            {
+                "image_url" : "https://revistafeel.com.mx/cms/wp-content/uploads/2017/02/Vania-Bachur-Suupergirl-2-Revista-Feel.png"
+            },
+            {
+                "image_url" : "https://letsriot.tv/wp-content/uploads/2019/09/vania-bachur-ilutsracio%CC%81n.png"
+            }
+        ]
     }
 ]

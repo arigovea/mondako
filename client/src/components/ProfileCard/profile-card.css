@@ -1,7 +1,8 @@
 #card-container{
     background-color: #eaedee;
     border-radius: 15px;
-    margin-left: 75px;
+    margin-left: 80px;
+    height: fit-content;
 }
 #card-container .rounded-circle{
     width: 175px;
@@ -23,9 +24,6 @@
     width: 25px;
     height: 15px;
     margin: auto 10px;
-}
-#profile-container{
-    background-color:#eaedee;
 }
 #card-container p{
     width: 66%;

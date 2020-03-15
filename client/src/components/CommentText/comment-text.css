@@ -1,0 +1,26 @@
+#comment-group{
+    display: inline-flex;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+#comment-group input{
+    resize: none;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+#comment-button, #comment-button:active{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+}
+#comment-button:hover{
+    color: #662d91
+}
+#comment-group input:focus {
+    background-color: rgba(255, 255, 255, 0.445);
+}

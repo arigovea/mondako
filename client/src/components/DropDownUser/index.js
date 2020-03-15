@@ -24,7 +24,7 @@ const ProfileMenu = (props) => {
           <Image src={Sarahi} roundedCircle />
           </DropdownToggle>
           <DropdownMenu right>
-            <DropdownItem href="/profile">
+            <DropdownItem href="/sarahigovea">
             <img className="icon" alt="Profile" src={profile} />
               Perfil</DropdownItem>
             <DropdownItem divider />

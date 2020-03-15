@@ -1,0 +1,26 @@
+.box-profile{
+    background-color: #eaedee;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 5px;
+}
+.box-profile img{
+    width: fit-content;
+    margin-top: auto;
+    width: 100%;
+    height: auto;
+}
+.box-profile img:hover{
+    border: solid 5px #3a278f;
+}
+#container-profile{
+    display: inline-block;
+    width: 100%;
+    margin-right: 65px;
+}
+.comic-profile{
+    margin: 10px; 
+    height: 25%;
+    width: 47%;
+}

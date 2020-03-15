@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
-import {Row, Col, Container} from 'reactstrap';
+import ProfileCard from '../ProfileCard';
+import ProfileContent from '../ProfileContent';
 
-class Favorites extends Component{
+class Favorites extends Component{  
     render(){
-       return <div>Favoritos</div>
+        const{ favorites, mondako_url } = this.props.User
+       return <div className="containerProf">
+        <ProfileCard User ={this.props.User} />
+        <ProfileContent Comics = {favorites} url={mondako_url} />
+        </div>
     }
 }
+
 export default Favorites;

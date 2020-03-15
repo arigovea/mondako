@@ -11,6 +11,7 @@ import saved from "../../utilities/saved.png";
 import commentsGray from '../../utilities/commentsGray.png';
 import CommentLeft from '../CommentLeft';
 import CommentRight from '../CommentRight';
+import CommentText from '../CommentText';
 
 
 class Comic extends Component{
@@ -20,9 +21,14 @@ class Comic extends Component{
         this.state = {
             favorite: false,
             saved: false,
-            comment: false
+            comment: false,
+            value: "",
+            commentsArray: []
         }
-    }    
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }    
 
     addlike = () => {
         if (this.state.favorite){
@@ -51,7 +57,7 @@ class Comic extends Component{
         }
     };
 
-    addComment = () => {
+    addTextComment = () => {
         if(this.state.comment){
             this.setState({
                 comment: false
@@ -63,6 +69,28 @@ class Comic extends Component{
             });
         }
     };
+
+    deleteComment = (value) => {
+        let copyComments = [...this.state.commentsArray];
+        let findComment = copyComments.findIndex(comment => comment === value);
+        copyComments.splice(findComment, 1);
+        this.setState({commentsArray: copyComments});
+    };
+
+
+    handleChange(event) {
+        event.preventDefault();
+        this.setState({value: event.target.value}, 
+        ()=> {console.log(this.state.value);});
+      }
+
+  handleSubmit() {
+      if(this.state.value !== null){
+        let copyComments = [...this.state.commentsArray];
+        copyComments.push(this.state.value);
+        this.setState({commentsArray: copyComments}, this.addTextComment());
+      }
+  };
 
     render(){
         const { 
@@ -100,7 +128,7 @@ class Comic extends Component{
                         <img className="icon" alt="Favorites" src= {favorites} />
                        }
                    </button>
-                   <button onClick={() => this.addComment()}>
+                   <button onClick={() => this.addTextComment()}>
                       {
                         this.state.comment ?
                         <img className="icon" alt="Comment" src={comments} /> :
@@ -120,8 +148,18 @@ class Comic extends Component{
                    </button>
                </Col>
            </Row>
-           <CommentLeft User={User} Flag={Flag} />
-           <CommentRight User={User} Flag={Flag} />
+           { 
+                this.state.commentsArray.map(c => (
+                    this.state.commentsArray.indexOf(c) % 2 === 0 ? 
+                        <CommentLeft value={c} User={User} Flag={Flag} deleteComment={this.deleteComment} /> :
+                        <CommentRight value={c} User={User} Flag={Flag} deleteComment={this.deleteComment} />
+                ))
+            }
+           {
+               this.state.comment ? <CommentText 
+                onChange={this.handleChange}
+                onSubmit={this.handleSubmit} /> : null
+           }
         </Col>
     }
 }

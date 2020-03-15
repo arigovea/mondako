@@ -34,6 +34,8 @@
     background-color: white;
     border-radius: 3px;
     border: 5px solid white;
+    display: flex;
+    justify-content: center;
   }
   
   .body .message {
@@ -88,4 +90,26 @@
   }
   .message-right, .message-right p{
     text-align: end;
+    font-size: 14px;
+  }
+  #delete-right, #delete-left{
+    margin: 0px;
+    width: 100%;
+    height: auto;
+  }
+  .body button {
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+    padding: 0px;
+    background: transparent;
+    border: none;
+    outline: transparent;
+  }
+  .message-left, .message-right{
+    display: inline-table;
+    width: 95%;
+  }
+  #delete-right{
+
   }

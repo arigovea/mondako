@@ -3,14 +3,12 @@ import ProfileCard from '../ProfileCard'
 import ProfileContent from '../ProfileContent';
 
 class Profile extends Component{
-    constructor(props){
-        super(props)
-    }    
     render(){
-       return <>
+        const{ comics, mondako_url } = this.props.User
+       return <div className="containerProf">
         <ProfileCard User ={this.props.User} />
-        <ProfileContent />
-        </>
+        <ProfileContent Comics = {comics} url={mondako_url} />
+        </div>
     }
 }
 export default Profile;

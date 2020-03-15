@@ -2,10 +2,12 @@ import React from 'react';
 import Image from 'react-bootstrap/Image';
 import {Row} from 'reactstrap';
 import './comment.css';
-import ProfilePhoto from '../../utilities/Sarahi.jpg'
+import ProfilePhoto from '../../utilities/Sarahi.jpg';
+import Delete from '../../utilities/delete.png';
 
 function CommentLeft(props) {
-    const { User, Flag } = props
+    console.log(props.deleteComment)
+    const { User, Flag, value } = props
     return <>
     <Row className="commentIcon">
         <div className="PhotoComment-left">
@@ -21,9 +23,12 @@ function CommentLeft(props) {
                             <img src={Flag} />
                         </span>
                         <span>
-                            <p>Hola</p>
+                            <p>{value}</p>
                         </span>
                     </div>
+                    <button onClick={() => props.deleteComment(value)}>
+                         <img className="icon" id = "delete-right" alt="Delete" src= {Delete} />
+                    </button>
                 </div>
             </div>
         </div>

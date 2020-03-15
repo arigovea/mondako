@@ -19,12 +19,11 @@ import Favorites from './components/Favorites';
 import Saved from './components/Saved';
 import Settings from './components/Settings';
 import Donations from './components/Donations';
-import User from './services/Profile.json';
+import Argentina from './components/Argentina';
+import Users from './services/Users.json';
+import UserLogIn from './services/Profile.json';
 
 class App extends Component{
-  constructor(props){
-    super(props)
-  }
 
   render(){
     return <Router>
@@ -36,12 +35,19 @@ class App extends Component{
           <Route path='/explore'>
             <Explore />
           </Route>
+          <Route path='/argentina'>
+            <Argentina />
+          </Route>
           <Route path='/messages'>
             <Messages />
           </Route>
-          <Route path='/profile'>
-            <Profile User = {User}/>
-          </Route>
+          {
+            Users.map(user=>(
+              <Route path={user.mondako_url}>
+                <Profile User = {user}/>
+              </Route> 
+            ))
+          }
           <Route path='/settings'>
             <Settings />
           </Route>
@@ -49,10 +55,10 @@ class App extends Component{
             <Donations />
           </Route>
           <Route path='/favorites'>
-            <Favorites />
+            <Favorites User={UserLogIn[0]} />
           </Route>
           <Route path='/saved'>
-            <Saved />
+            <Saved User={UserLogIn[0]} />
           </Route>
           <Route path='/forum'>
             <Forum />
@@ -62,7 +68,7 @@ class App extends Component{
           </Route>
           <Route
               path='/comic/:id'
-              render={(props) => <Comic {...props} UserName={User[0].name} UserCountry={User[0].country_img}/>} />
+              render={(props) => <Comic {...props} UserName={UserLogIn.name} UserCountry={UserLogIn.country_img}/>} />
           <Route path = "/">
             <Home />
             </Route>

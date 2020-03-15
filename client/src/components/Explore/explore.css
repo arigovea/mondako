@@ -7,3 +7,13 @@
 .continent-label{
     margin-bottom: 25px;
 }
+.flagContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.flagContainer a:visited, .flagContainer a:link, .flagContainer a:active{
+    color: black;
+}
+.flagContainer a:hover{
+    color: #3a278f;
+}

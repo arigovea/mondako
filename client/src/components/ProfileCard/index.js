@@ -2,8 +2,6 @@ import React from 'react';
 import Image from 'react-bootstrap/Image';
 import {Row, Col} from 'reactstrap';
 import './profile-card.css';
-import profile from '../../services/Profile.json';
-import ProfileImg from '../../utilities/Sarahi.jpg';
 import emailIcon from '../../utilities/email.png';
 import facebookIcon from '../../utilities/facebook.png';
 import instagramIcon from '../../utilities/instagram.png';
@@ -17,11 +15,13 @@ function ProfileCard(props) {
         country_img, 
         email, 
         facebook, 
-        instagram} = props.User[0]
+        instagram,
+        user_img,
+        } = props.User
      return <>
      <Col  md='3' id='card-container'>
                 <Row >
-                    <Image roundedCircle src={ProfileImg}/>
+                    <Image roundedCircle src={user_img}/>
                     <span>
                         <h4>{name}</h4>
                         <Image id="flag" src={country_img}/>

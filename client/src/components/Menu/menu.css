@@ -35,6 +35,7 @@
   #burger{
    margin-right: 75px;
    background-clip: content-box;
+   outline: none;
   }
   .nav-item{
     margin-bottom: auto;
