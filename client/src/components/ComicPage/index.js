@@ -103,6 +103,7 @@ class Comic extends Component{
             } = this.props.location.state.comicToUse;
             const User = this.props.UserName;
             const Flag = this.props.UserCountry;
+            console.log(this.props)
 
        return <Col md="6" id="comic-page">
            <Row id="image-comic">

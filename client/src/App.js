@@ -68,7 +68,7 @@ class App extends Component{
           </Route>
           <Route
               path='/comic/:id'
-              render={(props) => <Comic {...props} UserName={UserLogIn.name} UserCountry={UserLogIn.country_img}/>} />
+              render={(props) => <Comic {...props} UserName={UserLogIn[0].name} UserCountry={UserLogIn[0].country_img}/>} />
           <Route path = "/">
             <Home />
             </Route>
