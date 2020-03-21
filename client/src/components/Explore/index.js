@@ -12,7 +12,7 @@ class Explore extends Component{
        return <>
        <div className = 'continent-container'>
         <Col className ="continent-label">
-        <h1>América</h1>
+        <h1 value ="America">América</h1>
         </Col>
         <Row className ='flagContainer'>
                { 
@@ -29,7 +29,7 @@ class Explore extends Component{
          </div>
          <div className = 'continent-container'>
         <Col className ="continent-label">
-            <h1>Asia</h1>
+            <h1 value = "Asia">Asia</h1>
         </Col>
         <Row className ='flagContainer'>
                { 
@@ -46,7 +46,7 @@ class Explore extends Component{
         </div>
         <div className = 'continent-container'>
         <Col className ="continent-label">
-            <h1>Europa</h1>
+            <h1 value = "Europe">Europa</h1>
         </Col>
         <Row className ='flagContainer'>
                { 

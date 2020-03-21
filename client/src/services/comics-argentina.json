@@ -5,7 +5,7 @@
         "description": "El amor puede ser ciego pero hay límites",
         "created_at": "Argentina",
         "created_by": "Maitena",
-        "image_url": "https://www.sleepydays.es/wp-content/uploads/2016/07/maitena-mujeres-alteradas-vinetas-humor-4.jpg",
+        "image_url": "https://www.comikaze.net/wp-content/uploads/2018/04/Maitena-machismo.jpeg",
         "image_author": "https://dla.cdncimeco.com/uploads/2017/10/image59dae2bb3d34a.jpg",
         "image_country": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg"
     },
@@ -50,7 +50,7 @@
         "image_country": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg"
     },
     {
-        "id": 11,
+        "id": "11",
         "title": "#NiUnaMenos",
         "description": "Enriqueta quiere ver a las mujeres libres y felices",
         "created_at": "Argentina",
