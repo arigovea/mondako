@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom';
 const Banner = (props) => {
     return <>
             <div className="background-container">
-                <Link to="/suupergirl">
+                <Link to="users/suupergirl">
                     <Button color="primary" size="lg">
                         Ver más
                     </Button>

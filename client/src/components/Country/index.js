@@ -4,10 +4,10 @@ import {Col} from 'reactstrap';
 import './country.css';
 
 function Country(props) {
-   const {image_url, spanish_title} = props.dataCountry;
+       const {name, url} = props;
     return <Col className='country-container'>
-           <Image src={image_url} />  
-           <h5>{spanish_title}</h5>
+           <Image src={url} />  
+           <h5>{name}</h5>
            </Col>
     }
   export default Country;

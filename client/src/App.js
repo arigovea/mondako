@@ -19,15 +19,28 @@ import Favorites from './components/Favorites';
 import Saved from './components/Saved';
 import Settings from './components/Settings';
 import Donations from './components/Donations';
-import Argentina from './components/Argentina';
-import Users from './services/Users.json';
-import UserLogIn from './services/Profile.json';
+import CountryPage from './components/CountryPage';
+import axios from 'axios';
 
 class App extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+        user: {}
+      }
+  }
+componentDidMount(){
+  let userLogin = "sarahigovea";
+    axios.get(`http://localhost:9000/users/${userLogin}`).
+    then(res => {
+      let user=res.data[0]
+        this.setState({ user });
+      });
+  };
 
   render(){
     return <Router>
-      <Menu/>
+      <Menu user={this.state.user} />
       <Container id = "general-container">
       <Row>
         <Col md='12'>
@@ -35,31 +48,27 @@ class App extends Component{
           <Route path='/explore'>
             <Explore />
           </Route>
-          <Route path='/argentina'>
-            <Argentina />
-          </Route>
+            <Route 
+            path='/country/:country_name'
+            render={(props) => <CountryPage {...props} />} />
           <Route path='/messages'>
             <Messages />
           </Route>
-          {
-            Users.map(user=>(
-              <Route path={user.mondako_url}>
-                <Profile User = {user}/>
-              </Route> 
-            ))
-          }
+          <Route 
+             path='/users/:mondako_url'
+             render={(props) => <Profile {...props} />} /> 
           <Route path='/settings'>
             <Settings />
           </Route>
           <Route path='/donations'>
             <Donations />
           </Route>
-          <Route path='/favorites'>
-            <Favorites User={UserLogIn[0]} />
-          </Route>
-          <Route path='/saved'>
-            <Saved User={UserLogIn[0]} />
-          </Route>
+          <Route 
+            path='/favorites/:mondako_url'
+            render={(props) => <Favorites {...props} />} />
+          <Route 
+            path='/saved/:mondako_url'
+            render={(props) => <Saved {...props} />} />
           <Route path='/forum'>
             <Forum />
           </Route>
@@ -68,7 +77,7 @@ class App extends Component{
           </Route>
           <Route
               path='/comic/:id'
-              render={(props) => <Comic {...props} UserName={UserLogIn[0].name} UserCountry={UserLogIn[0].country_img}/>} />
+              render={(props) => <Comic {...props} user={this.state.user} />} />
           <Route path = "/">
             <Home />
             </Route>

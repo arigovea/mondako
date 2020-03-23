@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Sarahi from "../../utilities/Sarahi.jpg";
 import profile from "../../utilities/profile.png";
 import messages from "../../utilities/messages.png";
 import favorites from "../../utilities/favorites.png";
@@ -15,16 +14,16 @@ import {
 
 const ProfileMenu = (props) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
-  
     const toggle = () => setDropdownOpen(!dropdownOpen);
-  
+
+    const {user_img, mondako_url} = props.user;
     return ( <>
 <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle nav caret>
-          <Image src={Sarahi} roundedCircle />
+          <Image src={user_img} roundedCircle />
           </DropdownToggle>
           <DropdownMenu right>
-            <DropdownItem href="/sarahigovea">
+            <DropdownItem href={`/users${mondako_url}`}>
             <img className="icon" alt="Profile" src={profile} />
               Perfil</DropdownItem>
             <DropdownItem divider />
@@ -32,11 +31,11 @@ const ProfileMenu = (props) => {
             <img className="icon" alt="Messages" src={messages} />
               Mensajes</DropdownItem>
             <DropdownItem divider />
-            <DropdownItem href="/favorites">
+            <DropdownItem href={`/favorites${mondako_url}`}>
             <img className="icon" alt="Favorites" src={favorites} />
               Favoritos</DropdownItem>
               <DropdownItem divider />
-            <DropdownItem href="/saved">
+            <DropdownItem href={`/saved${mondako_url}`}>
             <img className="icon" alt="Saved" src={saved} />
              Guardados</DropdownItem>
              <DropdownItem divider />

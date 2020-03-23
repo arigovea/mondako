@@ -1,41 +1,38 @@
 import React, { Component } from 'react';
 import {Container, Row} from 'reactstrap';
-import Banner from '../Banner';
-import './home.css';
 import ComicHome from '../ComicHome/index';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
-class Home extends Component{
+class CountryPage extends Component{
     state = {
         comics: []
-      }
+      };
 
-      componentDidMount() {
-        axios.get(`http://localhost:9000/comics/popular`)
+    componentDidMount() {
+        const country = this.props.match.params.country_name;
+        axios.get(`http://localhost:9000/comics/country?country=${country}`)
           .then(res => {
-            const comics = res.data;
-            this.setState({ comics });
+              let comics = [...res.data];
+              this.setState({ comics });
           })
       }
     render(){
        return <Container id="home">
-           <Banner/>
            <Row id="comic-container">
-               { 
+               {
                    this.state.comics.map(comic => (
                     <Link to={{
-                        pathname: `/comic/${comic.id_comic}`
+                        pathname: `/comic/${comic.id_comic}`,
                 }}>
                         <ComicHome image_url={comic.image_url}/>
                     </Link>
-                       
-                   )
-                )
-               }
+                   
+                    ))
+                }
            </Row>
        </Container>
     }
 }
 
-export default Home;
+export default CountryPage;

@@ -3,7 +3,7 @@ import { con } from "../../connection/mysqlconnection";
 
 export default (req: Request, res: Response) => {
   const comic = req.query.comic;
-  con.query(`DELETE FROM liked WHERE id_comic = ${comic}`,
+  con.query(`DELETE FROM liked WHERE id_comic=${comic}`,
     function (err, result) {
       if (err) { throw err };
       

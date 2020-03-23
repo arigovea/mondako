@@ -4,7 +4,7 @@ import './comicHome.css';
 
 
 function ComicHome (props){
-    const {image_url} = props.comicToUse
+    const {image_url} = props;
        return <>
                <Image src={image_url} rounded/>
           </>

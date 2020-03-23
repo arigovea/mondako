@@ -11,22 +11,22 @@ import share from '../../utilities/share.png';
 function ProfileCard(props) {
     const { 
         name, 
-        description, 
-        country_img, 
+        description_user, 
         email, 
         facebook, 
         instagram,
         user_img,
-        } = props.User
+        country_url
+        } = props.User;
      return <>
      <Col  md='3' id='card-container'>
                 <Row >
                     <Image roundedCircle src={user_img}/>
                     <span>
                         <h4>{name}</h4>
-                        <Image id="flag" src={country_img}/>
+                        <Image id="flag" src={country_url}/>
                     </span>
-                    <p>{description}</p>
+                    <p>{description_user}</p>
                 </Row>
                 <Row id="social-network">
                     <span>

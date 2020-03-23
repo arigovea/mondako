@@ -5,11 +5,12 @@ import Image from "react-bootstrap/Image";
 import MenuProfile from '../MenuProfile';
 
 class ProfileContent extends Component{
+    
     render(){
        return <>
        <Col md='7'id="container-profile">
            <Row>
-               <MenuProfile url={this.props.url}/>
+                <MenuProfile url={this.props.url}/>
            </Row>
            <Row className="box-profile">
            {

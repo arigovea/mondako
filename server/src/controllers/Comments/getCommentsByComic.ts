@@ -7,7 +7,7 @@ export default (req: Request, res: Response) => {
     con.query(`SELECT comments.comment, user.name, country.country_url FROM comments
     INNER JOIN user ON user.id_user = comments.id_user
     INNER JOIN country ON user.id_country = country.id_country
-    WHERE comments.id_comic= ${comic} AND comments.showComment = 1;`,
+    WHERE comments.id_comic= ${comic};`,
 
         function (err, result) {
             if (err) { throw err };

@@ -56,7 +56,7 @@ const Menu = (props) => {
               Foro</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <ProfileMenu />
+        <ProfileMenu user={props.user} />
       </Navbar>
     </div>
   );

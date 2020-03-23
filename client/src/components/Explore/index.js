@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
 import {Row, Col} from 'reactstrap';
 import Country from '../Country/index.js';
-import America  from '../../services/America.json';
-import Europe from '../../services/Europe.json';
-import Asia from '../../services/Asia.json';
 import './explore.css';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 
 class Explore extends Component{
+    state = {
+        america: [],
+        europe: [],
+        asia: []
+      };
+
+    componentDidMount() {
+        axios.get(`http://localhost:9000/country/continent`)
+          .then(res => {
+              let america = res.data.filter(country => country.continent === "America");
+              let asia = res.data.filter(country => country.continent === "Asia");
+              let europe = res.data.filter(country => country.continent === "Europe");
+              this.setState({america, asia, europe});
+          })
+      };
+
     render(){
        return <>
        <div className = 'continent-container'>
@@ -16,11 +30,11 @@ class Explore extends Component{
         </Col>
         <Row className ='flagContainer'>
                { 
-                   America.map(country => (
+                   this.state.america.map(country => (
                    <Link to={{
-                        pathname: `/${country.spanish_title}`,
+                        pathname: `/country/${country.country_name}`,
                     }}>
-                       <Country dataCountry = {country} />
+                       <Country name = {country.country_name} url = {country.country_url} />
                     </Link>
                    )
                 )
@@ -33,11 +47,11 @@ class Explore extends Component{
         </Col>
         <Row className ='flagContainer'>
                { 
-                   Asia.map(country => (
+                this.state.asia.map(country => (
                     <Link to={{
-                        pathname: `/${country.spanish_title}`,
+                        pathname: `/country/${country.country_name}`,
                     }}>
-                       <Country dataCountry = {country} />
+                       <Country name = {country.country_name} url = {country.country_url} />
                     </Link>
                    )
                 )
@@ -50,11 +64,11 @@ class Explore extends Component{
         </Col>
         <Row className ='flagContainer'>
                { 
-                   Europe.map(country => (
+                   this.state.europe.map(country => (
                     <Link to={{
-                        pathname: `/${country.spanish_title}`,
+                        pathname: `/country/${country.country_name}`,
                     }}>
-                       <Country dataCountry = {country} />
+                       <Country name = {country.country_name} url = {country.country_url} />
                     </Link>
                    )
                 )

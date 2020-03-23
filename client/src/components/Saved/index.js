@@ -1,13 +1,28 @@
 import React, { Component } from 'react';
 import ProfileCard from '../ProfileCard';
 import ProfileContent from '../ProfileContent';
+import axios from 'axios';
 
 class Saved extends Component{
+  state = {
+    user: {},
+    comics: []
+    }
+
+componentDidMount() {
+    const profile = this.props.match.params.mondako_url;
+    axios.get(`http://localhost:9000/comics/saved/${profile}`)
+      .then(res => {
+          let user = res.data.user[0];
+          let comics = [...res.data.comics];
+        this.setState({ user, comics });
+      })
+  } 
+
     render(){
-        const{ saved, mondako_url } = this.props.User
        return <div className="containerProf">
-        <ProfileCard User ={this.props.User} />
-        <ProfileContent Comics = {saved} url={mondako_url} />
+        <ProfileCard User ={this.state.user} />
+        <ProfileContent Comics={this.state.comics} url={this.state.user.mondako_url} />
         </div>
     }
 }

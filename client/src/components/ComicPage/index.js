@@ -12,6 +12,7 @@ import commentsGray from '../../utilities/commentsGray.png';
 import CommentLeft from '../CommentLeft';
 import CommentRight from '../CommentRight';
 import CommentText from '../CommentText';
+import axios from 'axios';
 
 
 class Comic extends Component{
@@ -23,37 +24,66 @@ class Comic extends Component{
             saved: false,
             comment: false,
             value: "",
-            commentsArray: []
+            commentsArray: [{}],
+            comic: {}
         }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }    
+  }   
 
-    addlike = () => {
+    componentDidMount(){
+        let id = parseInt(this.props.match.params.id);
+        axios.get(`http://localhost:9000/comics/${id}`).
+        then(res => {
+            this.setState({ comic: res.data.info, 
+                favorite: res.data.liked,
+                saved: res.data.saved,
+                commentsArray: res.data.comments
+                });
+          });
+    };
+    updateLike = () => {
+        let id = parseInt(this.props.match.params.id);
         if (this.state.favorite){
-            this.setState({
-                favorite: false
-              });
+            axios.delete(`http://localhost:9000/comics/deleteliked?comic=${id}`).
+            then(res => {
+                console.log(res.data);
+                this.setState({
+                    favorite: false
+                  });
+            });
         }
         else{
-
-            this.setState({
-                favorite: true
-              });
+            axios.put(`http://localhost:9000/comics/addliked?comic=${id}`).
+            then(res => {
+                console.log(res.data);
+                this.setState({
+                    favorite: true,
+                  });
+            });
         }
     };
 
-    addSaved = () => {
+    updateSaved = () => {
+        let id = parseInt(this.props.match.params.id);
         if (this.state.saved){
-            this.setState({
-                saved: false
-              });
+            axios.delete(`http://localhost:9000/comics/deletesaved?comic=${id}`).
+            then(res => {
+                console.log(res.data);
+                this.setState({
+                    saved: false
+                  });
+            });
         }
         else{
-            this.setState({
-                saved: true
-              });
+            axios.put(`http://localhost:9000/comics/addsaved?comic=${id}`).
+            then(res => {
+                console.log(res.data);
+                this.setState({
+                    saved: true
+                  });
+            });
         }
     };
 
@@ -70,13 +100,15 @@ class Comic extends Component{
         }
     };
 
-    deleteComment = (value) => {
-        let copyComments = [...this.state.commentsArray];
-        let findComment = copyComments.findIndex(comment => comment === value);
-        copyComments.splice(findComment, 1);
-        this.setState({commentsArray: copyComments});
-    };
-
+    deleteComment = (id_comment) => {
+        let id_comic = parseInt(this.props.match.params.id);
+        console.log(id_comment, id_comic)
+        axios.put(`http://localhost:9000/comments/delete?comment=${id_comment}&comic=${id_comic}`)
+        .then(res => {
+            let copyComments = [...res.data];
+            this.setState({commentsArray: copyComments});
+    });
+}
 
     handleChange(event) {
         event.preventDefault();
@@ -85,10 +117,15 @@ class Comic extends Component{
       }
 
   handleSubmit() {
+    let id_comic = parseInt(this.props.match.params.id);
+    let comment = this.state.value;
+    let id_user = this.props.user.id_user;
       if(this.state.value !== null){
-        let copyComments = [...this.state.commentsArray];
-        copyComments.push(this.state.value);
-        this.setState({commentsArray: copyComments}, this.addTextComment());
+        axios.post(`http://localhost:9000/comments/add?comic=${id_comic}&user=${id_user}&comment=${comment}`)
+        .then(res => {
+            let copyComments = [...res.data];
+            this.setState({commentsArray: copyComments}, this.addTextComment());
+        });
       }
   };
 
@@ -96,14 +133,11 @@ class Comic extends Component{
         const { 
             title, 
             description, 
-            created_by, 
-            image_country,
-            image_author, 
+            name, 
+            country_url,
+            user_img, 
             image_url,
-            } = this.props.location.state.comicToUse;
-            const User = this.props.UserName;
-            const Flag = this.props.UserCountry;
-            console.log(this.props)
+            } = this.state.comic;
 
        return <Col md="6" id="comic-page">
            <Row id="image-comic">
@@ -111,18 +145,18 @@ class Comic extends Component{
            </Row>
            <Row id="comments">
                <Col md="2" id="comments-profile">
-                    <Image roundedCircle src = {image_author}></Image>
+                    <Image roundedCircle src = {user_img}></Image>
                </Col>
                <Col md="7" id="comments-data">
                     <h5>{title}</h5>
                     <span>
-                    <label><strong>Por: </strong> {created_by}</label>
-                    <Image src={image_country} />
+                    <label><strong>Por: </strong> {name}</label>
+                    <Image src={country_url} />
                     </span>
                     <h6>{description}</h6>
                </Col>
                <Col md="3" id="icon-group">
-                   <button onClick={() => this.addlike()}>
+                   <button onClick={() => this.updateLike()}>
                        {
                         this.state.favorite ?
                         <img className="icon" alt="Favorites" src= {favoritesYellow} /> :
@@ -136,7 +170,7 @@ class Comic extends Component{
                         <img className="icon" alt="Comment" src={commentsGray} />
                        }
                    </button>
-                   <button onClick={() => this.addSaved()}>
+                   <button onClick={() => this.updateSaved()}>
                        {
                         this.state.saved ?
                         <><img className="icon" alt="Saved" src={saved} /> </> :
@@ -152,8 +186,8 @@ class Comic extends Component{
            { 
                 this.state.commentsArray.map(c => (
                     this.state.commentsArray.indexOf(c) % 2 === 0 ? 
-                        <CommentLeft value={c} User={User} Flag={Flag} deleteComment={this.deleteComment} /> :
-                        <CommentRight value={c} User={User} Flag={Flag} deleteComment={this.deleteComment} />
+                        <CommentLeft value={c} deleteComment={this.deleteComment} user={this.props.user} /> :
+                        <CommentRight value={c} deleteComment={this.deleteComment} user={this.props.user} />
                 ))
             }
            {

@@ -16,13 +16,13 @@ router.get("/popular", getPopular);
 
 router.get("/country", getByCountry);
 
-router.get("/id", getComicById);
+router.get("/:id", getComicById);
 
-router.get("/username", getComicByUser);
+router.get("/user/:user", getComicByUser);
 
-router.get("/liked", getLiked);
+router.get("/liked/:user", getLiked);
 
-router.get("/saved", getSaved);
+router.get("/saved/:user", getSaved);
 
 router.put("/addliked", addLiked);
 
