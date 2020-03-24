@@ -14,19 +14,19 @@ export default (req: Request, res: Response) => {
 
             if (result.length === 0) {
                 res.status(404).send(err);
-            } 
+            }
             else {
                 con.query(`SELECT comments.id_comment, comments.comment, user.name, user.user_img, country.country_url FROM comments
                 INNER JOIN user ON user.id_user = comments.id_user
                 INNER JOIN country ON user.id_country = country.id_country
                 WHERE comments.id_comic= ${comic} AND comments.showComment = 1;`,
-            
+
                     function (err, comments) {
                         if (err) { throw err }
                         else {
                             res.status(200).send(comments);
                         }
-            
+
                     });
             }
 

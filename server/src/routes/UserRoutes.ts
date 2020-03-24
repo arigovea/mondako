@@ -5,6 +5,5 @@ const router: Router = express.Router();
 
 router.get("/:user", getUserByURL);
 
-
 export default router;
 

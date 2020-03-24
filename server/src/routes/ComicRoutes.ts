@@ -10,7 +10,7 @@ import addSaved from "../controllers/Comics/addSaved";
 import deleteLiked from "../controllers/Comics/deleteLiked";
 import deleteSaved from "../controllers/Comics/deleteSaved";
 
-const router: Router = express.Router(); 
+const router: Router = express.Router();
 
 router.get("/popular", getPopular);
 

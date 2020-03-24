@@ -11,7 +11,7 @@ export default (req: Request, res: Response) => {
 
       if (result.length === 0) {
         return res.status(404).send(err);
-      } 
+      }
       else {
         res.status(200).send(result);
       }

@@ -3,7 +3,7 @@ import addComments from "../controllers/Comments/addComment";
 import deleteComments from "../controllers/Comments/deleteComment";
 import getCommentsByComic from "../controllers/Comments/getCommentsByComic"
 
-const router: Router = express.Router(); 
+const router: Router = express.Router();
 
 router.post("/add", addComments);
 

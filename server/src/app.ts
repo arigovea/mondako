@@ -6,10 +6,10 @@ import countryRoutes from "./routes/CountryRoutes";
 import usersRoutes from "./routes/UserRoutes";
 import commentsRoutes from "./routes/CommentRoutes";
 
-const app: Application = express ();
+const app: Application = express();
 
 // body parser
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
