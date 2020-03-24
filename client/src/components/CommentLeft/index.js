@@ -5,8 +5,7 @@ import './comment.css';
 import Delete from '../../utilities/delete.png';
 
 function CommentLeft(props) {
-    const { comment, id_comment } = props.value;
-    const { name, country_url, user_img } = props.user;
+    const { comment, id_comment, name, country_url, user_img } = props.value;
     return <>
     <Row className="commentIcon">
         <div className="PhotoComment-left">
@@ -25,9 +24,11 @@ function CommentLeft(props) {
                             <p>{comment}</p>
                         </span>
                     </div>
+                    { props.user.name === name ? 
                     <button onClick={() => props.deleteComment(id_comment)}>
                          <img className="icon" id = "delete-right" alt="Delete" src= {Delete} />
-                    </button>
+                    </button> : null
+                    }
                 </div>
             </div>
         </div>

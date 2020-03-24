@@ -5,17 +5,17 @@ import '../CommentLeft/comment.css';
 import Delete from '../../utilities/delete.png'; 
 
 function CommentRight(props) {
-    const { comment, id_comment } = props.value;
-    const { name, country_url, user_img } = props.user;
-
+    const { comment, id_comment, name, country_url, user_img } = props.value;
     return <>
     <Row className="commentIcon">
         <div className="commentBox">
             <div className="dialogbox">
                     <div class="body">
-                        <button onClick={() => props.deleteComment(id_comment)}>
-                            <img className="icon" id = "delete-left" alt="Delete" src= {Delete} />
-                        </button>
+                    { props.user.name === name ? 
+                    <button onClick={() => props.deleteComment(id_comment)}>
+                         <img className="icon" id = "delete-left" alt="Delete" src= {Delete} />
+                    </button> : null
+                    }
                         <span className="tip tip-right"></span>
                     <div className="message-right">
                         <span className="right">

@@ -18,9 +18,14 @@
     display: inline-block;
     width: 100%;
     margin-right: 65px;
+    width: 58.33%;
 }
 .comic-profile{
-    margin: 10px; 
-    height: 25%;
+    height: 100%;
+    width: 100%;
+}
+.box-profile a{
     width: 47%;
+    height: 25%;
+    margin: 10px; 
 }

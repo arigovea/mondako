@@ -3,6 +3,7 @@ import './profile-content.css';
 import {Row, Col} from 'reactstrap';
 import Image from "react-bootstrap/Image";
 import MenuProfile from '../MenuProfile';
+import {Link} from 'react-router-dom';
 
 class ProfileContent extends Component{
     
@@ -15,9 +16,13 @@ class ProfileContent extends Component{
            <Row className="box-profile">
            {
             this.props.Comics.map(comic => (
-                <div className="comic-profile">
+                <Link to={{
+                    pathname: `/comic/${comic.id_comic}`
+            }}>
+                    <div className="comic-profile">
                 <Image className="rounded" src={comic.image_url} />
                 </div>
+                </Link>
             ))
                }
            </Row>

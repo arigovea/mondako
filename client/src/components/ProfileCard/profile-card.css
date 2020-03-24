@@ -3,6 +3,7 @@
     border-radius: 15px;
     margin-left: 80px;
     height: fit-content;
+    width: 25%;
 }
 #card-container .rounded-circle{
     width: 175px;

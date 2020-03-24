@@ -4,6 +4,7 @@
     background-color: #eaedee;
     border: 2px solid #eaedee;
     border-radius: 5px;
+    width: 50%;
 }
 #image-comic{
     background-color: #d1d3d4;
@@ -55,6 +56,7 @@
 }
 #comments-data{
     padding-top: 10px;
+    width: 58.33%;
 
 }
 #comments-data h5{
