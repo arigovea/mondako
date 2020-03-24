@@ -31,8 +31,7 @@ class App extends Component{
   }
 componentDidMount(){
   let userLogin = "sarahigovea";
-    axios.get(`http://localhost:9000/users/${userLogin}`).
-    then(res => {
+    axios.get(`http://localhost:9000/users/${userLogin}`).then(res => {
       let user=res.data[0]
         this.setState({ user });
       });

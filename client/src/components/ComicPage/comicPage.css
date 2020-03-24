@@ -36,6 +36,7 @@
 }
 #comments-profile{
     padding: 0px;
+    width: 16.66%;
 }
 #comments-data img{
     width: 25px;
@@ -53,6 +54,7 @@
 #comments-data span{
     display: flex;
     height: 25px;
+    width: 100%;
 }
 #comments-data{
     padding-top: 10px;
@@ -73,6 +75,7 @@
     display: flex;
     padding-right: 0px;
     justify-content: flex-end;
+    width: 25%;
 }
 #icon-group img{
     width: 100%;

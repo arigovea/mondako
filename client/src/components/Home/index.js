@@ -24,7 +24,7 @@ class Home extends Component{
            <Row id="comic-container">
                { 
                    this.state.comics.map(comic => (
-                    <Link to={{
+                    <Link key={comic.id_comic}to={{
                         pathname: `/comic/${comic.id_comic}`
                 }}>
                         <ComicHome image_url={comic.image_url}/>

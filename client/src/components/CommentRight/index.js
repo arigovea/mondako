@@ -20,7 +20,7 @@ function CommentRight(props) {
                     <div className="message-right">
                         <span className="right">
                             <label>{name}</label>
-                            <img src={country_url} />
+                            <img alt="Country" src={country_url} />
                         </span>
                         <span className="right">
                             <p>{comment}</p>

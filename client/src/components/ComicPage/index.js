@@ -18,7 +18,6 @@ import axios from 'axios';
 class Comic extends Component{
     constructor(props){
         super(props)
-
         this.state = {
             favorite: false,
             saved: false,
@@ -34,8 +33,7 @@ class Comic extends Component{
 
     componentDidMount(){
         let id = parseInt(this.props.match.params.id);
-        axios.get(`http://localhost:9000/comics/${id}`).
-        then(res => {
+        axios.get(`http://localhost:9000/comics/${id}`).then(res => {
             this.setState({ comic: res.data.info, 
                 favorite: res.data.liked,
                 saved: res.data.saved,
@@ -46,8 +44,7 @@ class Comic extends Component{
     updateLike = () => {
         let id = parseInt(this.props.match.params.id);
         if (this.state.favorite){
-            axios.delete(`http://localhost:9000/comics/deleteliked?comic=${id}`).
-            then(res => {
+            axios.delete(`http://localhost:9000/comics/deleteliked?comic=${id}`).then(res => {
                 console.log(res.data);
                 this.setState({
                     favorite: false
@@ -55,8 +52,7 @@ class Comic extends Component{
             });
         }
         else{
-            axios.put(`http://localhost:9000/comics/addliked?comic=${id}`).
-            then(res => {
+            axios.put(`http://localhost:9000/comics/addliked?comic=${id}`).then(res => {
                 console.log(res.data);
                 this.setState({
                     favorite: true,
@@ -68,8 +64,7 @@ class Comic extends Component{
     updateSaved = () => {
         let id = parseInt(this.props.match.params.id);
         if (this.state.saved){
-            axios.delete(`http://localhost:9000/comics/deletesaved?comic=${id}`).
-            then(res => {
+            axios.delete(`http://localhost:9000/comics/deletesaved?comic=${id}`).then(res => {
                 console.log(res.data);
                 this.setState({
                     saved: false
@@ -77,8 +72,7 @@ class Comic extends Component{
             });
         }
         else{
-            axios.put(`http://localhost:9000/comics/addsaved?comic=${id}`).
-            then(res => {
+            axios.put(`http://localhost:9000/comics/addsaved?comic=${id}`).then(res => {
                 console.log(res.data);
                 this.setState({
                     saved: true
@@ -103,8 +97,7 @@ class Comic extends Component{
     deleteComment = (id_comment) => {
         let id_comic = parseInt(this.props.match.params.id);
         console.log(id_comment, id_comic)
-        axios.put(`http://localhost:9000/comments/delete?comment=${id_comment}&comic=${id_comic}`)
-        .then(res => {
+        axios.put(`http://localhost:9000/comments/delete?comment=${id_comment}&comic=${id_comic}`).then(res => {
             let copyComments = [...res.data];
             this.setState({commentsArray: copyComments});
     });
@@ -121,8 +114,7 @@ class Comic extends Component{
     let comment = this.state.value;
     let id_user = this.props.user.id_user;
       if(this.state.value !== null){
-        axios.post(`http://localhost:9000/comments/add?comic=${id_comic}&user=${id_user}&comment=${comment}`)
-        .then(res => {
+        axios.post(`http://localhost:9000/comments/add?comic=${id_comic}&user=${id_user}&comment=${comment}`).then(res => {
             let copyComments = [...res.data];
             this.setState({commentsArray: copyComments}, this.addTextComment());
         });

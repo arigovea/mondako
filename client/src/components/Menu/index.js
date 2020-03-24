@@ -25,11 +25,9 @@ const Menu = (props) => {
   return (
     <div id="menu-bar">
       <Navbar light>
-        <NavbarBrand className="mr-auto" >
-        <a class="mr-auto navbar-brand" href="/">
-        <img id="brand-image" alt="logo" src={logo} />
-        </a>
-          </NavbarBrand>
+        <NavbarBrand className="mr-auto" href="/" >
+          <img id="brand-image" alt="logo" src={logo} />
+        </NavbarBrand>
         <FormGroup id = "search-group">
         <img alt="logo" src={search} />
         <Input

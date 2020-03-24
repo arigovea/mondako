@@ -18,7 +18,7 @@ function CommentLeft(props) {
                     <div className="message-left">
                         <span>
                             <label>{name}</label>
-                            <img src={country_url} />
+                            <img alt="Country" src={country_url} />
                         </span>
                         <span>
                             <p>{comment}</p>

@@ -16,7 +16,7 @@ export default (req: Request, res: Response) => {
                 res.status(404).send(err);
             } 
             else {
-                con.query(`SELECT comments.id_comment, comments.comment, user.name, country.country_url FROM comments
+                con.query(`SELECT comments.id_comment, comments.comment, user.name, user.user_img, country.country_url FROM comments
                 INNER JOIN user ON user.id_user = comments.id_user
                 INNER JOIN country ON user.id_country = country.id_country
                 WHERE comments.id_comic= ${comic} AND comments.showComment = 1;`,
