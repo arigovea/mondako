@@ -1,23 +1,22 @@
 import React from 'react';
-import {Row, Button} from 'reactstrap';
+import { Row, Button } from 'reactstrap';
 import './banner.css';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Banner = (props) => {
     return <>
-            <div className="background-container">
-                <Link to="users/suupergirl">
-                    <Button color="primary" size="lg">
-                        Ver más
-                    </Button>
-                </Link> 
-            </div>
+        <div className="background-container">
+            <Link to="users/suupergirl">
+                <Button color="primary" size="lg">
+                    Ver más
+                </Button>
+            </Link>
+        </div>
         <Row id="popular-group">
             <label>POPULAR</label>
-            <div className = "line"/>
+            <div className="line" />
         </Row>
-        
     </>
-}
+};
 
-export default Banner
+export default Banner;
