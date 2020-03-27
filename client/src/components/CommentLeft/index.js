@@ -12,7 +12,7 @@ function CommentLeft(props) {
         </div>
         <div className="commentBox">
             <div className="dialogbox">
-                <div class="body">
+                <div className="body">
                     <span className="tip tip-left"></span>
                     <div className="message-left">
                         <span>

@@ -17,23 +17,21 @@ export default (req: Request, res: Response) => {
                     function (err, liked) {
                         if (err) { throw err }
                         else {
+                            let likedTemp = false
                             for (let i = 0; i < liked.length; i++) {
-                                if (liked[i].id_comic == result[0].id_comic) {
-                                    liked = true;
-                                } else {
-                                    liked = false;
-                                }
+                                if (liked[i].id_comic == id_comic) {
+                                    likedTemp = true;
+                                } 
                             };
                             con.query(`SELECT id_comic FROM saved;`,
                                 function (err, saved) {
                                     if (err) { throw err }
                                     else {
+                                        let savedTemp = false;
                                         for (let i = 0; i < saved.length; i++) {
-                                            if (saved[i].id_comic == result[0].id_comic) {
-                                                saved = true;
-                                            } else {
-                                                saved = false;
-                                            }
+                                            if (saved[i].id_comic == id_comic) {
+                                                savedTemp = true;
+                                            } 
                                         };
                                         con.query(`SELECT comments.id_comment, comments.comment, comments.showComment, user.name, user.user_img, country.country_url FROM comments
                                         INNER JOIN user ON user.id_user = comments.id_user
@@ -44,8 +42,8 @@ export default (req: Request, res: Response) => {
                                                 else {
                                                     result = {
                                                         info: result[0],
-                                                        liked: liked,
-                                                        saved: saved,
+                                                        liked: likedTemp,
+                                                        saved: savedTemp,
                                                         comments: comments
                                                     };
                                                     res.status(200).send(result);

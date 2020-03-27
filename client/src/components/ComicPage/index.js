@@ -55,7 +55,7 @@ class Comic extends Component {
             axios.put(`http://localhost:9000/comics/addliked?comic=${id}`).then(res => {
                 console.log(res.data);
                 this.setState({
-                    favorite: true,
+                    favorite: true
                 });
             });
         }
@@ -177,8 +177,8 @@ class Comic extends Component {
             {
                 this.state.commentsArray.map(c => (
                     this.state.commentsArray.indexOf(c) % 2 === 0 ?
-                        <CommentLeft value={c} deleteComment={this.deleteComment} user={this.props.user} /> :
-                        <CommentRight value={c} deleteComment={this.deleteComment} user={this.props.user} />
+                        <CommentLeft value={c} deleteComment={this.deleteComment} user={this.props.user} key={parseInt(c.id_comment)} /> :
+                        <CommentRight value={c} deleteComment={this.deleteComment} user={this.props.user} key={parseInt(c.id_comment)} />
                 ))
             }
             {

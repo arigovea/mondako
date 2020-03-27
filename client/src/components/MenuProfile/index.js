@@ -16,7 +16,7 @@ class MenuProfile extends Component {
                 <Link to={{
                     pathname: `/users${url}`
                 }}>
-                    <img class="icon" alt="Posts" src={Post} />
+                    <img className="icon" alt="Posts" src={Post} />
                 </Link>
             </button>
             {
@@ -30,21 +30,21 @@ class MenuProfile extends Component {
                         <Link to={{
                             pathname: `/favorites${url}`
                         }}>
-                            <img class="icon" alt="Favorites" src={Favorites} />
+                            <img className="icon" alt="Favorites" src={Favorites} />
                         </Link>
                     </button>
                     <button className="button-profile">
                         <Link to={{
                             pathname: `/saved${url}`
                         }}>
-                            <img class="icon" alt="Saved" src={Saved} />
+                            <img className="icon" alt="Saved" src={Saved} />
                         </Link>
                     </button> </> :
                     null
             }
             <button className="button-profile">
                 <Link to="/donations">
-                    <img class="icon" alt="Donations" src={Donations} />
+                    <img className="icon" alt="Donations" src={Donations} />
                 </Link>
             </button>
         </div>

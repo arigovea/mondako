@@ -44,11 +44,11 @@ const Menu = (props) => {
               Explora</DropdownItem>
           <DropdownItem divider />
           <DropdownItem id="nearyou-menu" href="/nearyou">
-            <img className="icon" alt="Near You" src={forum} />
+            <img className="icon" alt="Near You" src={nearyou} />
               Cerca de ti</DropdownItem>
           <DropdownItem divider />
           <DropdownItem href="/forum">
-            <img className="icon" alt="Forum" src={nearyou} />
+            <img className="icon" alt="Forum" src={forum} />
               Foro</DropdownItem>
         </DropdownMenu>
       </Dropdown>

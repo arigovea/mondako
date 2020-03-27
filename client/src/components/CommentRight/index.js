@@ -9,7 +9,7 @@ function CommentRight(props) {
     return <Row className="commentIcon">
         <div className="commentBox">
             <div className="dialogbox">
-                <div class="body">
+                <div className="body">
                     {props.user.name === name ?
                         <button onClick={() => props.deleteComment(id_comment)}>
                             <img className="icon" id="delete-left" alt="Delete" src={Delete} />
